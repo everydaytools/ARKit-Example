@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="ARKitRuler" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lsF-9v-QnB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JbI-wL-yqa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="focus_off" translatesAutoresizingMaskIntoConstraints="NO" id="gRF-Zf-spn">
+                                <rect key="frame" x="162" y="308" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dTs-ct-bME"/>
+                                    <constraint firstAttribute="width" constant="30" id="sG5-FU-Wp2"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gRF-Zf-spn" firstAttribute="centerY" secondItem="lsF-9v-QnB" secondAttribute="centerY" id="7wH-Ig-laX"/>
+                            <constraint firstItem="gRF-Zf-spn" firstAttribute="centerX" secondItem="lsF-9v-QnB" secondAttribute="centerX" id="AJM-ho-N2a"/>
+                            <constraint firstAttribute="bottom" secondItem="JbI-wL-yqa" secondAttribute="bottom" id="PDp-4O-sD1"/>
+                            <constraint firstAttribute="trailing" secondItem="JbI-wL-yqa" secondAttribute="trailing" id="RV1-PW-BJp"/>
+                            <constraint firstItem="JbI-wL-yqa" firstAttribute="leading" secondItem="lsF-9v-QnB" secondAttribute="leading" id="lpN-WP-GqD"/>
+                            <constraint firstItem="JbI-wL-yqa" firstAttribute="top" secondItem="lsF-9v-QnB" secondAttribute="top" id="zWm-Rk-S9F"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SHS-vq-auh"/>
+                    </view>
+                    <connections>
+                        <outlet property="focus" destination="gRF-Zf-spn" id="0GQ-vA-ysC"/>
+                        <outlet property="sceneView" destination="JbI-wL-yqa" id="Kg0-9w-eKF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="focus_off" width="26" height="26"/>
+    </resources>
+</document>
